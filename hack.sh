@@ -1,4 +1,5 @@
 #!/bin/bash
+list=("added index file","updated readme file", "did some extra calculations","deleted media files","extra code removed")
 for i in {1..20}
 do
 	touch temp$i.txt
@@ -8,9 +9,9 @@ do
 	c=" 14:00 2016 +0530"
 	export GIT_AUTHOR_DATE=$a$b$c
 	export GIT_COMMITTER_DATE=$a$b$c
-	git commit -am "hack the code"
+	git commit -am "`echo ${list[$RANDOM % ${#list[@]} ]}`"
 	rm temp$i.txt
 	export GIT_AUTHOR_DATE=$a$b$c
 	export GIT_COMMITTER_DATE=$a$b$c
-	git commit -am "hack the code"
+	git commit -am "`echo ${list[$RANDOM % ${#list[@]} ]}`"
 done
