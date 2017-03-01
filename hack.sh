@@ -19,4 +19,5 @@ do
 	export GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
 	git commit -m "Addes some patches"
 	git commit -am "`echo ${list[$RANDOM % ${#list[@]} ]}`"
+	git push origin master
 done
