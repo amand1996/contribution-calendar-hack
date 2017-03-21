@@ -13,10 +13,11 @@ do
 	rm temp$i.txt
 	export GIT_AUTHOR_DATE=$a$b$c
 	export GIT_COMMITTER_DATE=$a$b$c
-	export GIT_AUTHOR_NAME="Linus Torvalds"
-	export GIT_AUTHOR_EMAIL="torvalds@linux-foundation.org"
+	export GIT_AUTHOR_NAME="shivams334"
+	export GIT_AUTHOR_EMAIL="shivams334@gmail.com"
 	export GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
 	export GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
 	git commit -m "Addes some patches"
 	git commit -am "`echo ${list[$RANDOM % ${#list[@]} ]}`"
+	git push origin master
 done
